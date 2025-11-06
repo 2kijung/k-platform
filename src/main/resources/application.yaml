@@ -1,3 +1,22 @@
 spring:
   application:
     name: k-platform
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kplatform?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: ""   # ← 비밀번호 있으면 여기에 입력 (예: "mypassword")
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # 테이블 자동 업데이트 (개발용)
+    show-sql: true        # 실행되는 SQL 콘솔 출력
+    properties:
+      hibernate:
+        format_sql: true  # SQL 예쁘게 출력
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
