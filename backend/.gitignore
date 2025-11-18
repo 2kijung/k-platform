@@ -1,10 +1,29 @@
+# ──────────────
+# 📄 기본 파일 무시
+# ──────────────
 HELP.md
 target/
+build/
+dist/
+
+# Maven Wrapper
 .mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+.nb-gradle/
+
+# 예외 처리
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### STS ###
+# ──────────────
+# 🧪 IDE 설정
+# ──────────────
+
+## STS (Spring Tool Suite)
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +32,36 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+## IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+## NetBeans
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+/nbgradle/
 
-### VS Code ###
+## VS Code
 .vscode/
+
+# ──────────────
+# 💻 macOS
+# ──────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ──────────────
+# 🪟 Windows
+# ──────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump

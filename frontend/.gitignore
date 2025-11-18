@@ -1,0 +1,68 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ──────────────
+# 📦 Dependencies
+# ──────────────
+/node_modules
+/.pnp
+.pnp.js
+
+# ──────────────
+# 🧪 Testing
+# ──────────────
+/coverage
+
+# ──────────────
+# 🚀 Production
+# ──────────────
+/build
+/dist
+
+# ──────────────
+# 🔐 Environment variables
+# ──────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ──────────────
+# 🪵 Logs
+# ──────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ──────────────
+# 💻 macOS
+# ──────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ──────────────
+# 🪟 Windows
+# ──────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# ──────────────
+# 🧠 IDEs & Editors
+# ──────────────
+# VS Code
+.vscode/
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
