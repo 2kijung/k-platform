@@ -17,7 +17,7 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true, length = 50)
-    private String username;  // ✅ 변경 (name → username)
+    private String username;
 
     @Column(nullable = false, unique = true, length = 50)
     private String email;

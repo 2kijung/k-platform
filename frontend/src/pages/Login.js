@@ -12,24 +12,25 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('/api/users/login', { // proxy 적용된 상대경로
+      const res = await fetch('/api/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
 
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (e) {
+        // JSON 파싱 실패 시 빈 객체로 처리
+      }
+
       if (res.ok) {
-        const data = await res.json();
-        console.log('✅ 로그인 성공:', data);
-
-        // 예시: 토큰 저장
+        console.log('로그인 성공:', data);
         localStorage.setItem('token', data.token);
-
-        // ✅ 로그인 성공 시 홈으로 이동
         navigate('/home');
       } else {
-        const errorData = await res.json();
-        alert(`❌ 로그인 실패: ${errorData.message || '오류 발생'}`);
+        alert(`로그인 실패: ${data.message || '아이디 또는 비밀번호가 틀렸습니다.'}`);
       }
     } catch (err) {
       console.error(err);

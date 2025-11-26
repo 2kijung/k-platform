@@ -7,6 +7,6 @@ public class HomeController {
 
     @GetMapping("s")
     public String home() {
-        return "서버 연결 성공 👋";
+        return "서버 연결 성공";
     }
 }
