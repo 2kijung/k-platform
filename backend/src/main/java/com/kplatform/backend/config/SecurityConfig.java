@@ -17,6 +17,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/users/register", "/api/users/login").permitAll()
+                        .requestMatchers("/api/gas").permitAll() // 유가정보
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

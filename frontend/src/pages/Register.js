@@ -3,7 +3,7 @@ import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  const [username, setUsername] = useState(''); // ✅ name → username
+  const [username, setUsername] = useState(''); //  name → username
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
